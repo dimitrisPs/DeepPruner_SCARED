@@ -19,10 +19,15 @@ import torchvision.transforms as transforms
 __imagenet_stats = {'mean': [0.485, 0.456, 0.406],
                     'std': [0.229, 0.224, 0.225]}
 
+__scared_stats = {'mean': [0.516, 0.351, 0.414],
+                  'std': [0.2261, 0.210, 0.227]}
 
-def get_transform():
+
+def get_transform(use_scared=False):
 
     normalize = __imagenet_stats
+    if use_scared:
+        normalize = __scared_stats
     t_list = [
         transforms.ToTensor(),
         transforms.Normalize(**normalize),
