@@ -1,0 +1,17 @@
+{
+    "datapath": "path/to/keyframe/dataset",
+    "dense": false,
+    "loadmodel":"path/to/pretrained/model/DeepPruner-best-sceneflow.tar",
+    "cost_aggregator_scale": 4,
+    "max_disp": 512,
+    "chery": true,
+    "optim_learning_rate": 1e-4,
+    "optim_lr_decay": 0,
+    "batch_train": 1,
+    "batch_eval": 1,
+    "epochs": 300,
+    "save_summary_steps": 10,
+    "num_workers": 4,
+    "seed": 5,
+    "cuda": true
+}
