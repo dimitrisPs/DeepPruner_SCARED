@@ -26,7 +26,7 @@ class obj(object):
 
 
 config = {
-    "max_disp": 192,
+    "max_disp": 512,
     "cost_aggregator_scale": 4, # for DeepPruner-fast change this to 8.
     "mode": "training", # for evaluation/ submission, change this to evaluation.
 
