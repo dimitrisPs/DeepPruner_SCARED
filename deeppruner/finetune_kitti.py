@@ -107,7 +107,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.1, betas=(0.9, 0.999))
 
 def train(imgL, imgR, disp_L, iteration, epoch):
     if epoch >= 800:
-		model.eval()
+        model.eval()
     else:	
         model.train()
 
