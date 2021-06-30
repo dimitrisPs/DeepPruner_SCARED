@@ -45,8 +45,13 @@ Dataset
 The SCARED challenge made available an endoscopic dataset with semi-dense depth annotations
 and made possible training learning based methods for depth and disparity estimation
 in the surgical domain. The dataset consists of stereo video sequences, accompanied with
-ground truth point map annotations and stereo calibration parameters. In order
-for the dataset to be used with stereo matching methods, like DeepPruner, we
+ground truth point map annotations and stereo calibration parameters.
+
+To get access to the dataset, you visit the the [Challenge's webpage](https://endovissub2019-scared.grand-challenge.org/Home/),
+request to join the competition and after your request pass the review process
+will be provided with instructions on how to download the dataset.
+
+In order for the dataset to be used with stereo matching methods, like DeepPruner, we
 first need to generate appropriate stereo rectified input frames and disparity
 samples. The former can be easily achieved using the provided calibration
 parameters and OpenCV stereo rectification codebase, while the later can be achieved by
