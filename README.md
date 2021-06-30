@@ -81,7 +81,7 @@ left image. Doing this for all points in the pointcloud, gives us a disparity
 image. Because projections will not end up in discrete pixel coordinates, we
 first compute the horizontal distance between the two projection in pixels
 and then store the disparity in the rounded projection coordinated in the
-left image. This will introduce additional error to the ground truth disparity 
+left image. This will introduce additional error to the ground truth disparity
 samples of 0.5 pixels at most.
 
 4. Store the disparity images as uint16 pngs following the KITTI format. In our
@@ -124,7 +124,7 @@ with alpha=1 in order to preserve the whole rgb frame within the rectified view.
 Pre-trained models
 -----------------
 
-The SCARED finetuned model, used for the challenge submission can be found [here]()
+The SCARED finetuned model, used for the challenge submission can be found [here](https://liveuclac-my.sharepoint.com/:u:/g/personal/ucabdps_ucl_ac_uk/EcRDTpJcmFxGsU9nNYcTFEQBbnEWnS0h2OUSlol7ynnzYQ?e=kd5K6p)
 
 To recreate it, you need to fine-tune DeepPruner on SCARED data, starting from the sceneflow model
 available at the [Original DeepPruner repository](https://github.com/uber-research/DeepPruner)
@@ -146,7 +146,7 @@ SCARED submission
 -----------------
 
 1. Stereo rectify the videos(alpha=1) and store them as images, following the file structure
-bellow(dataset 8, 9 and keyframes1-5). In case of keyframe_5, where
+bellow(dataset 8, 9 and keyframes 1-5). In case of keyframe_5, where
 there isn't any video sequence, you only use the keyframe information instead.
 
 ```tree
