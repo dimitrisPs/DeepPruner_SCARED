@@ -71,8 +71,8 @@ the rotation matrices(R1,R2), projection matrices(P1,P2) for the stereo
 rectifed views and the Q matrix. This can be achieved using OpenCV's
 `stereoRectify()` function.
 
-2. Stereo rectify RGB frames using OpenCV's `initUndistortRectifyMap`, `remap`
-functions and the matrices computed during step one.
+2. Stereo rectify RGB frames using OpenCV's `initUndistortRectifyMap()`, `remap()`
+and the matrices computed during step one.
 
 3. Using P1, P2, project the corresponding pointcloud to both left and right stereo rectified
 image frames. Disparity is the difference in x between the location of the two
@@ -117,7 +117,7 @@ SCARED_disparity_keyframe_dataset
 
 The naming convention followed, is {dataset number}_{keyframe_number}.png
 To recreate the SCARED fine-tuned model you should stereo-rectify the provided
-frames using alpha=0 as a parameter to the `stereoRectify()` functions.
+frames using alpha=0 as a parameter to the `stereoRectify()`.
 The same RGB stereo rectification process must be followed for the test set but
 with alpha=1 in order to preserve the whole rgb frame within the rectified view.
 
