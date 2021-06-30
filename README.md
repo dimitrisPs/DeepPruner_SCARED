@@ -46,7 +46,7 @@ and made possible training learning based methods for depth and disparity estima
 in the surgical domain. The dataset consists of stereo video sequences, accompanied with
 ground truth point map annotations and stereo calibration parameters.
 
-To get access to the dataset, you visit the the [Challenge's webpage](https://endovissub2019-scared.grand-challenge.org/Home/),
+To get access to the dataset, you visit the [Challenge's webpage](https://endovissub2019-scared.grand-challenge.org/Home/),
 request to join the competition and after your request pass the review process
 will be provided with instructions on how to download the dataset.
 
