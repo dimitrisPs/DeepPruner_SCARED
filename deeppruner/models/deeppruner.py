@@ -116,7 +116,7 @@ class DeepPruner(SubModule):
         """
 
         device = left_input.get_device()
-        if stage is "pre":
+        if stage == "pre":
             min_disparity = torch.zeros((left_input.size()[0], 1, left_input.size()[2], left_input.size()[3]),
                                         device=device)
             max_disparity = torch.zeros((left_input.size()[0], 1, left_input.size()[2], left_input.size()[3]),
@@ -157,7 +157,7 @@ class DeepPruner(SubModule):
         Returns:
             :disparity_samples:
         """
-        if sampler_type is "patch_match":
+        if sampler_type == "patch_match":
             disparity_samples = self.patch_match(left_input, right_input, min_disparity,
                                                  max_disparity, sample_count, self.patch_match_iteration_count)
         else:

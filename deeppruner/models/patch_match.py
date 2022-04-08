@@ -180,7 +180,7 @@ class Propagation(nn.Module):
                                                    disparity_samples.size()[2],
                                                    disparity_samples.size()[3])
 
-        if propagation_type is "horizontal":
+        if propagation_type == "horizontal":
             label = torch.arange(0, self.filter_size, device=device).repeat(self.filter_size).view(
                 self.filter_size, 1, 1, 1, self.filter_size)
 
