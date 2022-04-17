@@ -132,10 +132,12 @@ def main(args):
     if args.original_depth:
         # compare the predicted and original
         gt_depth = tiff.imread(args.original_depth)[...,-1]
+        assert gt_depth.shape == interpolated_depth.shape
         gt_depth[gt_depth==0]=np.nan
         diff = (gt_depth-interpolated_depth)
-        diff = np.abs(np.nan_to_num(diff))
-        print(f'MAE: {diff.mean()}')# Mean Absolute Error
+        diff = np.abs(diff)
+        depth_error = np.nanmean(diff)
+        print(f'MAE: {depth_error}')# Mean Absolute Error
 
     cv2.imshow('disp_to_original_depth', img3d[...,-1].astype(np.uint8))
     cv2.imshow('interpolated_depth', interpolated_depth.astype(np.uint8))
